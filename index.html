@@ -32,6 +32,17 @@
             padding: 170px 0; /* Sesuaikan padding untuk ruang yang lebih baik */
             text-align: center;
         }
+        .downloadNow{
+            line-height: 160px;
+            background-color: #000000;
+            height: 170px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .border-right-blue {
+            border-right: 2px solid blue;
+            height: 100px;
+        }
         
         .feature-section{
             /* background-color: black; */
@@ -46,7 +57,7 @@
             height:1000px;
         }
         .container{
-            width: 100%;
+            width: 95%;
         }
         .feature-card {
             border: none;
@@ -125,6 +136,19 @@
             line-height: 1.2; /* Jarak antar baris */
             margin-bottom: 20px;
             text-align: center; /* Posisi teks di tengah */
+        }        
+        .divLogo{
+            height:550px;
+        }
+
+        .labelDownload{
+            font-style: italic;
+            font-size: 70px;
+            margin: 0;
+        }
+
+        .downloadApple{
+            height: 100%;
         }
 
         /* Media query untuk tablet */
@@ -139,7 +163,38 @@
             h2 {
                 font-size: 1.5rem;
             }
+            .mainlogo{
+                height: 250px;
+            }
+
+            .divLogo{
+                height: 400px;
+            }
+            
+            .labelDownload{
+                font-style: italic;
+                font-size: 20px;
+            }
+            .downloadNow{
+                line-height: 60px;
+            }
+            .downloadApple{
+                height: 50px;
+            }
+            .qrApple{
+                height: 50px;
+            }
+            .downloadAndroid{
+                height: 50px;
+            }
+            .qrAndroid{
+                height: 50px;
+            }
+            .border-right-blue {
+                border-right: 0px;
+            }
         }
+
 
         /* CSS untuk membuat iframe responsif */
         .iframe-container {
@@ -170,8 +225,8 @@
                 justify-content: center; /* Pusatkan secara horizontal */
             }
             .mainlogo{
-            height: 450px;
-        }
+                height: 450px;
+            }
         }
     </style>
 </head>
@@ -179,13 +234,39 @@
 <body>
  <!-- Hero Section -->
  <section class="hero-section">
-    <div class="container">        
-        
-        <img src="./img/logo_new_bcas.png" alt="Logo" class="mainlogo">
-
-        <div class="downloadNow">
-            
+    <div class="container">
+        <div class="divLogo">
+            <img src="./img/head_logo.png" alt="Logo" class="mainlogo">
         </div>
+        
+        <div class="row">
+            <div class="downloadNow">
+                <div class="col-md-4 labelDownload">
+                    Download Now !
+                </div>
+                <div class="col-md-4 border-right-blue">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <img src="./img/download_apple.png" alt="Logo" class="downloadApple">
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <img src="./img/qr_apple.png" alt="Logo" class="qrApple">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 ">
+                            <img src="./img/download_android.png" alt="Logo" class="downloadAndroid">
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <img src="./img/qr_android.png" alt="Logo" class="qrAndroid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </section>
 
