@@ -10,32 +10,215 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 
-    <link rel="stylesheet" href="./css/bootstrap.min.css">    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 
     <style type="text/css">
-        html, body {
-            height:100%;
-            background-image: url('./img/rm222batch2-mind-03.jpg');
+         body {
+            font-family: Arial, sans-serif;
         }
-        /* .bgimg {
-            background-image: url('./img/rm222batch2-mind-03.jpg');
-        } */
-        </style>
+        .hero-section {
+            background-image: url('./img/galaxy.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            color: white; 
+            padding: 100px 0; /* Sesuaikan padding untuk ruang yang lebih baik */
+            text-align: center;
+        }
+        .feature-section{
+            background-color: black;
+        }
+        .feature-section .container{            
+            border-radius: 25px; 
+            background: linear-gradient(to bottom, #277db6, #000000);
+            background-color: #000000;
+            padding: 20px;
+            color: white;
+            width: 95%;
+            height:1000px;
+        }
+        .container{
+            width: 100%;
+        }
+        .feature-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .cta-section {
+            background-color: #000000;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .cta-section .container{
+            width: 95%;
+        }
+        .cta-section .btn {
+            background-color: white;
+            color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .accordion-header {
+            padding: 20px;
+        }
+        .accordion-button::after {
+            display: none; /* Sembunyikan ikon panah default */
+            margin-left: auto;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            display: inline-block; /* Tampilkan ikon panah atas saat dibuka */
+            content: "\f217"; /* Ikon panah atas (chevron-up) */
+            font-family: "bootstrap-icons" !important;
+        }
+
+        .accordion-button.collapsed::after {
+            display: inline-block; /* Tampilkan ikon panah bawah saat ditutup */
+            content: "\f218"; /* Ikon panah bawah (chevron-down) */
+            font-family: "bootstrap-icons" !important;
+        }
+        .card{
+            padding: 50px;
+            border-top: 1px solid #7e7a7a;
+            border-bottom: 1px solid #7e7a7a;
+            width: 95%;
+        }
+        .footer-section {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .accordion-item {
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
 </head>
 
 <body>
+ <!-- Hero Section -->
+ <section class="hero-section">
     <div class="container">
-        <h1>My First Bootstrap Page</h1>
-        <p>This is some text.</p>
-      </div>
+        <h1>Nikmati Kemudahan Investasi</h1>
+        <p>Dengan fitur-fitur menarik di aplikasi terbaik dan BCA Sekuritas</p>
+        <img src="./img/logo_dummy.png" alt="BCA Logo" class="img-fluid" style="max-width: 150px;">
+    </div>
+</section>
+
+<!-- Feature Section -->
+<section class="feature-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div class="feature-card">
+                    <h3>Monitor</h3>
+                    <p>Pantau saham favorit Anda dengan akurasi yang dipersonalisasi.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-12">
+                <div class="feature-card">
+                    <h3>Trade Seamlessly</h3>
+                    <p>Bertransaksi saham lebih mudah dan cepat.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-12">
+                <div class="feature-card">
+                    <h3>Access Real-Time Insights</h3>
+                    <p>Dapatkan data pengelolaan saham terbaik untuk keputusan investasi Anda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div class="accordion" id="featureAccordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            Cara mudah untuk Check Portfolio
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePortfolio" aria-expanded="true" aria-controls="collapsePortfolio">
+                                <i class="bi bi-chevron-down"></i> 
+                            </button>
+                        </div>
+                        <div id="collapsePortfolio" class="accordion-collapse collapse show" data-bs-parent="#featureAccordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            Cara mudah untuk Transaksi
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTransaksi" aria-expanded="false" aria-controls="collapseTransaksi">
+                                X
+                            </button>
+                        </h2>
+                        <div id="collapseTransaksi" class="accordion-collapse collapse" data-bs-parent="#featureAccordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            Cara mudah untuk Withdraw
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWithdraw" aria-expanded="false" aria-controls="collapseWithdraw">
+                                X
+                            </button>
+                        </h2>
+                        <div id="collapseWithdraw" class="accordion-collapse collapse" data-bs-parent="#featureAccordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            Cara mudah untuk Check Stock Picks
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStock" aria-expanded="false" aria-controls="collapseStock">
+                                X
+                            </button>
+                        </h2>
+                        <div id="collapseStock" class="accordion-collapse collapse" data-bs-parent="#featureAccordion">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <p>&copy; 2025 BCA Sekuritas. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
-<script type="text/javascript">
-    $(document).ready(function() {
+<!-- <script type="text/javascript">
+    $(document).ready(function () {
         alert("This from Jquery!");
     });
-</script>
+</script> -->
 
 </html>
