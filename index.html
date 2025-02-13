@@ -76,16 +76,18 @@
         }
 
         .feature-section .container {
-            /* border-radius: 15px; */
-            /* background: linear-gradient(to bottom, #277db6, #000000); */
-            background-image: url('./img/background_2.png');
-            background-size: cover;
-            background-repeat: no-repeat;            
-            /* background-color: #000000; */
+            border-radius: 15px 15px;
             padding: 20px;
             color: white;
             width: 95%;
             /* height: 2000px; */
+        }
+
+        .low-sect {
+            background-image: url('./img/background_2.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: -40px;
         }
 
         .container {
@@ -123,6 +125,10 @@
         .accordion-header {
             padding: 20px;
             background-color: transparent !important;
+        }
+
+        .accordion-collapse {
+            transition: height 0.6s ease;
         }
 
         .accordion * {
@@ -229,7 +235,8 @@
         }
 
         .feature-img {
-            height: 500px;
+            max-height: 500px;
+            height: 50vw;
         }
 
         .align-right {
@@ -237,12 +244,14 @@
         }
 
         .text-feature {
-            margin-top: 100px;
-            height: 200px;
+            margin-top: 15vw;
+            max-height: 200px;
+            height: 15vw;
         }
 
-        .text-feature-hastag{
-            height: 100px;
+        .text-feature-hastag {
+            max-height: 100px;
+            height: 8vw;
         }
 
         .margin-top-feature {
@@ -315,21 +324,15 @@
             .margin-top-feature {
                 margin-top: -125px;
             }
-            .margin-top-feature{
+
+            .margin-top-feature {
                 margin-top: -90px;
             }
 
-            .text-feature-hastag{
+            .text-feature-hastag {
                 height: 35px;
             }
 
-            .feature-section{
-                /* width: 100%; */
-            }
-
-            .feature-section .container {
-                background-size: contain;
-            }
         }
 
 
@@ -407,9 +410,6 @@
     }
 
 
-
-
-
 </script>
 
 <body>
@@ -423,7 +423,14 @@
                     <img src="./img/head_logo.png" alt="Logo" style="width:15vw; min-width:150px">
                     <div class="d-flex h-100" style="position:absolute; top:0%; left:90%;">
                         <div class="my-auto d-flex" style="overflow-x: hidden;">
-                            <img class="align-self-start" src="./img/new.gif" alt="Logo"
+                            <img class="align-self-start d-none d-md-block" src="./img/new.gif" alt="Logo"
+                                style="min-height:30px;height:4vw">
+                        </div>
+                    </div>
+
+                    <div class="d-flex" style="position:absolute; top:100%; left:10%;">
+                        <div class="my-auto d-flex" style="overflow-x: hidden;">
+                            <img class="align-self-start d-md-none" src="./img/new.gif" alt="Logo"
                                 style="min-height:30px;height:4vw">
                         </div>
                     </div>
@@ -517,7 +524,7 @@
 
     <!-- Feature Section -->
     <section class="feature-section">
-        <div class="container">
+        <div class="container low-sect">
             <div class="row">
                 <div class="label-feature-1 normal-text">
                     Nikmati berbagai fitur untuk memudahkan investasi Anda
@@ -551,36 +558,30 @@
 
                 <div class="col-12 col-md-12 margin-top-feature">
                     <div class="feature-card">
-                       <div class="row">                        
+                        <div class="row">
                             <div class="col-6 col-md-6 align-right">
                                 <img src="./img/mobile_3.png" class="feature-img">
                             </div>
                             <div class="col-6 col-md-6">
-                                <img src="./img/w_mobile_3.png" class ="text-feature">
+                                <img src="./img/w_mobile_3.png" class="text-feature">
                             </div>
-                       </div>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="col-12 col-md-12 margin-top-feature">
                     <div class="feature-card">
-                       <div class="row">                        
+                        <div class="row">
                             <div class="col-6 col-md-6 align-right">
-                                
+
                             </div>
                             <div class="col-6 col-md-6">
                                 <img src="./img/w_investasi_saham_anti_ribet.png" class="text-feature-hastag">
                             </div>
-                       </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12">
                     <div class="accordion" id="featureAccordion">
@@ -810,6 +811,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Footer Section -->
     <footer class="footer-section">
