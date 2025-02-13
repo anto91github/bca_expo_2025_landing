@@ -76,14 +76,16 @@
         }
 
         .feature-section .container {
-            border-radius: 15px;
+            /* border-radius: 15px; */
             /* background: linear-gradient(to bottom, #277db6, #000000); */
             background-image: url('./img/background_2.png');
+            background-size: cover;
+            background-repeat: no-repeat;            
             /* background-color: #000000; */
             padding: 20px;
             color: white;
             width: 95%;
-            height: 2000px;
+            /* height: 2000px; */
         }
 
         .container {
@@ -239,8 +241,12 @@
             height: 200px;
         }
 
+        .text-feature-hastag{
+            height: 100px;
+        }
+
         .margin-top-feature {
-            margin-top: -200px;
+            margin-top: -150px;
         }
 
         /* Media query untuk tablet */
@@ -308,6 +314,21 @@
 
             .margin-top-feature {
                 margin-top: -125px;
+            }
+            .margin-top-feature{
+                margin-top: -90px;
+            }
+
+            .text-feature-hastag{
+                height: 35px;
+            }
+
+            .feature-section{
+                /* width: 100%; */
+            }
+
+            .feature-section .container {
+                background-size: contain;
             }
         }
 
@@ -471,7 +492,7 @@
                         </div>
                     </div>
                     <div class="col-md-1">
-                        <div class="line align-self-center" style=height:2px;background:#1667B3;
+                        <div class="line align-self-center" style="height:2px;background:#1667B3;
                             margin-left:auto;margin-right:auto">
                         </div>
                     </div>
@@ -528,10 +549,29 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-12">
+                <div class="col-12 col-md-12 margin-top-feature">
                     <div class="feature-card">
-                        <h3>Access Real-Time Insights</h3>
-                        <p>Dapatkan data pengelolaan saham terbaik untuk keputusan investasi Anda.</p>
+                       <div class="row">                        
+                            <div class="col-6 col-md-6 align-right">
+                                <img src="./img/mobile_3.png" class="feature-img">
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <img src="./img/w_mobile_3.png" class ="text-feature">
+                            </div>
+                       </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-12 margin-top-feature">
+                    <div class="feature-card">
+                       <div class="row">                        
+                            <div class="col-6 col-md-6 align-right">
+                                
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <img src="./img/w_investasi_saham_anti_ribet.png" class="text-feature-hastag">
+                            </div>
+                       </div>
                     </div>
                 </div>
             </div>
