@@ -43,10 +43,13 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-image: url('./img/background.png');
+            background-color: #000000;
+            background-image: url('./img/background_test.png');
             background-size: cover;
             /* background-position: center;  */
             background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: -30vw;
         }
 
         .hero-section {
@@ -85,7 +88,7 @@
 
         .low-sect {
             background-image: url('./img/background_2.png');
-            background-size: cover;
+            background-size: auto;
             background-repeat: no-repeat;
             background-position: -40px;
         }
@@ -123,6 +126,7 @@
         }
 
         .accordion-header {
+            font-size: 0.1 vw;
             padding: 20px;
             background-color: transparent !important;
         }
@@ -415,8 +419,7 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center justify-content-center ">
-
+            <div class="row align-items-center justify-content-center pt-5">
                 <div class="position-relative" style="width: fit-content;">
                     <img src="./img/head_logo.png" alt="Logo" style="width:15vw; min-width:150px">
                     <div class="d-flex h-100" style="position:absolute; top:0%; left:90%;">
@@ -442,20 +445,20 @@
 
         <div style="width: 100%;">
             <div class="d-none d-md-block">
-                <div class="row downloadNow p-4" style="width: 90%;max-width:2100px;margin-left:auto;margin-right:auto">
+                <div class="row downloadNow p-4" style="width:70%;max-width:2100px;margin-left:auto;margin-right:auto">
                     <div class="col-md-3 d-flex align-items-center">
                         <div class="mx-auto">
-                            <h1 style="height:100%;font-size:3.5vw;"><b><i>Download Now !</i></b></h1>
+                            <h1 style="height:100%;font-size: 2vw;"><b><i>Download Now!</i></b></h1>
                         </div>
 
                     </div>
                     <div class="col-md-4">
                         <div class="row align-items-center my-2">
                             <div class="col-md-8 col-xs-6">
-                                <img src="./img/download_apple.png" alt="Logo" style="max-height: 120px; height:5vw;">
+                                <img src="./img/download_apple.png" alt="Logo" style="max-height: 120px; height:4vw;">
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <img src="./img/qr_apple.png" alt="Logo" style="max-height: 150px; height:8vw;">
+                                <img src="./img/qr_apple.png" alt="Logo" style="max-height: 150px; height:6vw;">
                             </div>
                         </div>
                     </div>
@@ -467,15 +470,15 @@
                     <div class="col-md-4">
                         <div class="row align-items-center my-2">
                             <div class="col-md-8 col-xs-6 ">
-                                <img src="./img/download_android.png" alt="Logo" style="max-height: 120px; height:5vw;">
+                                <img src="./img/download_android.png" alt="Logo" style="max-height: 120px; height:4vw;">
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <img src="./img/qr_android.png" alt="Logo" style="max-height: 150px;  height:8vw;">
+                                <img src="./img/qr_android.png" alt="Logo" style="max-height: 150px;  height:6vw;">
                             </div>
                         </div>
                     </div>
                 </div>
-                <img src="./img/mid_sect.png" alt="Logo" style="width:90vw;">
+                <img src="./img/mid_sect.png" alt="Logo" style="width: 70%;">
             </div>
 
             <div class="d-md-none">
@@ -514,7 +517,7 @@
 
                 </div>
 
-                <img src="./img/mid_sect_small.png" alt="Logo" style="width:90vw;">
+                <img src="./img/mid_sect_small.png" alt="Logo" style="width:90%;">
             </div>
         </div>
     </section>
