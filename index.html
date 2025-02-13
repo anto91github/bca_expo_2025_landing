@@ -55,7 +55,7 @@
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 10vh 0;
+            /* padding: 10vh 0; */
             /* Sesuaikan padding untuk ruang yang lebih baik */
             text-align: center;
         }
@@ -362,6 +362,13 @@
         .mainlogo {
             height: 450px;
         }
+
+        .car-content {
+            margin: 40px;
+            border-radius: 40px;
+            border: aliceblue solid;
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -374,7 +381,7 @@
 
     function loopInner(id, no_sect, x, y) {
         for (i = x; i < y; i++) {
-            document.getElementById(id).innerHTML += "<div class='carousel-item " + ((i == 1) ? "active" : "") + "'><img src = './img/carousel/" + no_sect + "_" + i + ".jpg' class='d-block w-100'></div > "
+            document.getElementById(id).innerHTML += "<div class='carousel-item " + ((i == 1) ? "active" : "") + "'><div class='car-content'><img src = './img/carousel/" + no_sect + "_" + i + ".jpg' class='d-block w-100'></div></div> "
         }
     }
 
@@ -392,11 +399,11 @@
             <div class="row align-items-center justify-content-center ">
 
                 <div class="position-relative" style="width: fit-content;">
-                    <img src="./img/head_logo.png" alt="Logo" style="width:20vw; min-width:150px">
-                    <div class="d-flex h-100" style="position:absolute; top:0%; left:90%; width: 80vw;">
+                    <img src="./img/head_logo.png" alt="Logo" style="width:15vw; min-width:150px">
+                    <div class="d-flex h-100" style="position:absolute; top:0%; left:90%;">
                         <div class="my-auto d-flex" style="overflow-x: hidden;">
                             <img class="align-self-start" src="./img/new.gif" alt="Logo"
-                                style="min-height:40px;height:8vw">
+                                style="min-height:30px;height:4vw">
                         </div>
                     </div>
                 </div>
@@ -407,22 +414,22 @@
         <br>
 
 
-        <div style="width: 100vw;">
+        <div style="width: 100%;">
             <div class="d-none d-md-block">
                 <div class="row downloadNow p-4" style="width: 90%;max-width:2100px;margin-left:auto;margin-right:auto">
                     <div class="col-md-3 d-flex align-items-center">
                         <div class="mx-auto">
-                            <h1 style="height:100%;font-size: 2vw;"><b><i>Download Now !</i></b></h1>
+                            <h1 style="height:100%;font-size:3.5vw;"><b><i>Download Now !</i></b></h1>
                         </div>
 
                     </div>
                     <div class="col-md-4">
                         <div class="row align-items-center my-2">
                             <div class="col-md-8 col-xs-6">
-                                <img src="./img/download_apple.png" alt="Logo" style="max-height: 80px; height:5vw;">
+                                <img src="./img/download_apple.png" alt="Logo" style="max-height: 120px; height:5vw;">
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <img src="./img/qr_apple.png" alt="Logo" style="max-height: 120px; height:8vw;">
+                                <img src="./img/qr_apple.png" alt="Logo" style="max-height: 150px; height:8vw;">
                             </div>
                         </div>
                     </div>
@@ -434,10 +441,10 @@
                     <div class="col-md-4">
                         <div class="row align-items-center my-2">
                             <div class="col-md-8 col-xs-6 ">
-                                <img src="./img/download_android.png" alt="Logo" style="max-height: 80px; height:5vw;">
+                                <img src="./img/download_android.png" alt="Logo" style="max-height: 120px; height:5vw;">
                             </div>
                             <div class="col-md-4 col-xs-6">
-                                <img src="./img/qr_android.png" alt="Logo" style="max-height: 120px;  height:8vw;">
+                                <img src="./img/qr_android.png" alt="Logo" style="max-height: 150px;  height:8vw;">
                             </div>
                         </div>
                     </div>
@@ -483,12 +490,7 @@
 
                 <img src="./img/mid_sect_small.png" alt="Logo" style="width:90vw;">
             </div>
-
         </div>
-
-
-
-
     </section>
 
 
@@ -559,7 +561,7 @@
                                                 loopIndicator("first_indicator", 'FirstIndicators', 1, 16)
                                             </script>
                                         </div>
-                                        <div class="carousel-inner" id="first_inner">
+                                        <div class="carousel-inner" id="first_inner" style="margin:10 10 10 10;">
                                             <script>
                                                 loopInner("first_inner", 1, 1, 16)
                                             </script>
@@ -663,7 +665,28 @@
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#featureAccordion">
                                 <div class="accordion-body">
-                                    Langkah-langkah untuk menarik dana dari investasi.
+                                    <div id="FourthIndicators" class="carousel slide">
+                                        <div class="carousel-indicators" id="fourth_indicator">
+                                            <script>
+                                                loopIndicator("fourth_indicator", 'FourthIndicators', 1, 12)
+                                            </script>
+                                        </div>
+                                        <div class="carousel-inner" id="fourth_inner">
+                                            <script>
+                                                loopInner("fourth_inner", 4, 1, 12)
+                                            </script>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#FourthIndicators" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#FourthIndicators" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -679,7 +702,66 @@
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#featureAccordion">
                                 <div class="accordion-body">
-                                    Langkah-langkah untuk memeriksa rekomendasi saham.
+                                    <div id="FifthIndicators" class="carousel slide">
+                                        <div class="carousel-indicators" id="fith_indicator">
+                                            <script>
+                                                loopIndicator("fith_indicator", 'FifthIndicators', 1, 8)
+                                            </script>
+                                        </div>
+                                        <div class="carousel-inner" id="fifth_inner">
+                                            <script>
+                                                loopInner("fifth_inner", 5, 1, 8)
+                                            </script>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#FifthIndicators" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#FifthIndicators" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Item 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Cara mudah untuk memantau <b><i>Watchlist</i></b>
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#featureAccordion">
+                                <div class="accordion-body">
+                                    <div id="sixthIndicators" class="carousel slide">
+                                        <div class="carousel-indicators" id="sixth_indicator">
+                                            <script>
+                                                loopIndicator("sixth_indicator", 'sixthIndicators', 1, 13)
+                                            </script>
+                                        </div>
+                                        <div class="carousel-inner" id="sixth_inner">
+                                            <script>
+                                                loopInner("sixth_inner", 6, 1, 13)
+                                            </script>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#sixthIndicators" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#sixthIndicators" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
