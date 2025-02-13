@@ -32,7 +32,7 @@
             background-position: center;
             background-repeat: no-repeat;
             color: white;
-            padding: 170px 0;
+            padding: 10vh 0;
             /* Sesuaikan padding untuk ruang yang lebih baik */
             text-align: center;
         }
@@ -321,16 +321,18 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-1" style="width: fit-content !important;">
-                    <img src="./img/head_logo.png" alt="Logo" style="max-width:400px;">
-                </div>
-                <div class="col-4 justify-content-start p-0">
-                    <div style="max-width: 500px;">
-                        <img src="./img/new.gif" alt="Logo" style="overflow-x: hidden; max-height:150px">
-                    </div>
+            <div class="row align-items-center justify-content-center ">
 
+                <div class="position-relative" style="width: fit-content;">
+                    <img src="./img/head_logo.png" alt="Logo" style="width:20vw; min-width:150px">
+                    <div class="d-flex h-100" style="position:absolute; top:0%; left:90%; width: 80vw;">
+                        <div class="my-auto d-flex" style="overflow-x: hidden;">
+                            <img class="align-self-start" src="./img/new.gif" alt="Logo"
+                                style="min-height:40px;height:8vw">
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
         <br>
@@ -338,33 +340,80 @@
 
 
         <div style="width: 100vw;">
-            <div class="row downloadNow p-2" style="width: 90%;max-width:2100px;margin-left:auto;margin-right:auto">
-
-                <div class="col-md-4">
-                    <h1 style="text-align:center; height:100%; margin-top:revert;"><b><i>Download Now !</i></b></h1>
-                </div>
-                <div class="col-md-4 border-right-blue">
-                    <div class="row">
-                        <div class="col-md-6 col-xs-6">
-                            <img src="./img/download_apple.png" alt="Logo" class="downloadApple">
+            <div class=" d-none d-md-block">
+                <div class="row downloadNow p-4" style="width: 90%;max-width:2100px;margin-left:auto;margin-right:auto">
+                    <div class="col-md-3 d-flex align-items-center">
+                        <div class="mx-auto">
+                            <h1 style="height:100%;font-size: 2vw;"><b><i>Download Now !</i></b></h1>
                         </div>
-                        <div class="col-md-6 col-xs-6">
-                            <img src="./img/qr_apple.png" alt="Logo" class="qrApple">
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row align-items-center my-2">
+                            <div class="col-md-8 col-xs-6">
+                                <img src="./img/download_apple.png" alt="Logo" style="max-height: 80px; height:5vw;">
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <img src="./img/qr_apple.png" alt="Logo" style="max-height: 120px; height:8vw;">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-6 col-xs-6 ">
-                            <img src="./img/download_android.png" alt="Logo" class="downloadAndroid">
-                        </div>
-                        <div class="col-md-6 col-xs-6">
-                            <img src="./img/qr_android.png" alt="Logo" class="qrAndroid">
+                    <div class="col-md-1">
+                        <div class="line align-self-center"
+                            style="height:100%; width:2px;background:#1667B3; margin-left:auto;margin-right:auto">
                         </div>
                     </div>
-                </div>
+                    <div class="col-md-4">
+                        <div class="row align-items-center my-2">
+                            <div class="col-md-8 col-xs-6 ">
+                                <img src="./img/download_android.png" alt="Logo" style="max-height: 80px; height:5vw;">
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <img src="./img/qr_android.png" alt="Logo" style="max-height: 120px;  height:8vw;">
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
             </div>
+
+            <div class=" d-none d-sm-block d-md-none">
+                <div class="row downloadNow p-4" style="width: 90%;max-width:2100px;margin-left:auto;margin-right:auto">
+                    <div class="col-md-3 d-flex align-items-center">
+                        <div class="mx-auto">
+                            <h1 style="height:100%;font-size: 4vw;"><b><i>Download Now !</i></b></h1>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-4">
+                        <div class="row align-items-center my-2">
+                            <div class="col-md-8 col-xs-6">
+                                <img src="./img/download_apple.png" alt="Logo" style="max-height: 80px; height:10vw;">
+                            </div>
+                            <div class="col-md-4 col-xs-6 my-2">
+                                <img src="./img/qr_apple.png" alt="Logo" style="height:30vw;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="line align-self-center" style=height:2px;background:#1667B3;
+                            margin-left:auto;margin-right:auto">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row align-items-center my-2">
+                            <div class="col-md-8 col-xs-6 ">
+                                <img src="./img/download_android.png" alt="Logo" style="max-height: 80px; height:10vw;">
+                            </div>
+                            <div class="col-md-4 col-xs-6 my-2">
+                                <img src="./img/qr_android.png" alt="Logo" style="height:30vw;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
 
