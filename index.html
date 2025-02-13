@@ -72,13 +72,14 @@
         }
 
         .feature-section .container {
-            border-radius: 25px;
-            background: linear-gradient(to bottom, #277db6, #000000);
+            border-radius: 15px;
+            /* background: linear-gradient(to bottom, #277db6, #000000); */
+            background-image: url('./img/background_2.png');
             /* background-color: #000000; */
             padding: 20px;
             color: white;
             width: 95%;
-            height: 1000px;
+            height: 2000px;
         }
 
         .container {
@@ -87,10 +88,10 @@
 
         .feature-card {
             border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* border-radius: 10px; */
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
             padding: 20px;
-            text-align: center;
+            /* text-align: center; */
             margin-bottom: 20px;
         }
 
@@ -213,6 +214,29 @@
         .downloadApple {
             height: 100%;
         }
+        .label-feature-1{
+            padding-top: 20px;
+            padding-left: 30px;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .feature-img{
+            height: 500px;
+        }
+
+        .align-right{
+            text-align: right;
+        }
+
+        .text-feature{
+            margin-top: 100px;
+            height: 200px;
+        }
+
+        .margin-top-feature{
+            margin-top: -200px;
+        }
 
         /* Media query untuk tablet */
         @media (max-width: 768px) {
@@ -259,6 +283,26 @@
 
             .border-right-blue {
                 border-right: 0px;
+            }
+
+            .label-feature-1{
+                padding-top: 20px;
+                padding-left: 30px;
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+
+            .feature-img{
+                height: 215px;
+            }
+
+            .text-feature{
+                margin-top: 60px;
+                height: 90px;
+            }
+
+            .margin-top-feature{
+                margin-top: -125px;
             }
         }
 
@@ -395,18 +439,36 @@
     <section class="feature-section">
         <div class="container">
             <div class="row">
+                <div class="label-feature-1 normal-text">
+                    Nikmati berbagai fitur untuk memudahkan investasi Anda
+                </div>
+
                 <div class="col-12 col-md-12">
                     <div class="feature-card">
-                        <h3>Monitor</h3>
-                        <p>Pantau saham favorit Anda dengan akurasi yang dipersonalisasi.</p>
+                       <div class="row">                        
+                            <div class="col-6 col-md-6 align-right">
+                                <img src="./img/mobile_1.png" class="feature-img">
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <img src="./img/w_mobile_1.png" class ="text-feature">
+                            </div>
+                       </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12">
+
+                <div class="col-12 col-md-12 margin-top-feature">
                     <div class="feature-card">
-                        <h3>Trade Seamlessly</h3>
-                        <p>Bertransaksi saham lebih mudah dan cepat.</p>
+                        <div class="row">       
+                            <div class="col-6 col-md-6 align-right">
+                                <img src="./img/w_mobile_2.png" class ="text-feature">
+                            </div>                 
+                            <div class="col-6 col-md-6">
+                                <img src="./img/mobile_2.png" class="feature-img">
+                            </div>                            
+                       </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-md-12">
                     <div class="feature-card">
                         <h3>Access Real-Time Insights</h3>
