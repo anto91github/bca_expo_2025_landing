@@ -252,10 +252,20 @@
 
 
         .car-content {
-            margin: 5%;
+            margin: 1vw 0 1vw 0;
             border-radius: 4vw;
             border: aliceblue solid;
             overflow: hidden;
+        }
+
+        .carousel-inner {
+            position: relative;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            top: 100%;
+            left: 0;
         }
     </style>
 </head>
@@ -263,7 +273,7 @@
 <script lang="text/javascript">
     function loopIndicator(id, id_target, x, y) {
         for (i = x; i < y; i++) {
-            document.getElementById(id).innerHTML += "<button type = 'button' data-bs-target='#" + id_target + "' data-bs-slide-to='" + (i - 1) + "' " + ((i == 1) ? "class='active'" : "") + " aria-current='true' aria-label='Slide " + i + "'></button> "
+            document.getElementById(id).innerHTML += "<button type = 'button' data-bs-target='#" + id_target + "' data-bs-slide-to='" + (i - 1) + "' " + ((i == 1) ? "class='active'" : "") + " aria-current='true' aria-label='Slide " + i + "'></button>"
         }
     }
 
