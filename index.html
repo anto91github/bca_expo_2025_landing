@@ -143,26 +143,40 @@
         }
 
         .accordion-button::after {
-            content: "▼";
-            /* Panah bawah (default) */
+            content: "";
+            background-image: url('./img/car_icon.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 2.5vw; 
+            height: 3vw;
+            display: inline-block;
+
             position: absolute;
             right: 15px;
             /* Posisi icon di kanan */
-            top: 50%;
-            transform: translateY(-50%);
+            /* top: 10%; */
+            /* transform: translateY(-50%); */
             font-size: 14px;
             transition: transform 0.3s ease;
             /* Animasi rotasi */
-            background-image: unset !important;
+            /* background-image: unset !important; */
         }
 
         /* Icon panah saat accordion terbuka */
         .accordion-button:not(.collapsed)::after {
-            content: "▲";
-            /* Panah atas */
+            content: "";
+            background-image: url('./img/car_icon_active.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 2.5vw; 
+            height: 3vw;
+            top: 50%;
+            display: inline-block;
             transform: translateY(-50%) rotate(0deg);
             /* Tetap posisi atas */
-            background-image: unset !important;
+            
         }
 
 
