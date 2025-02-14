@@ -149,9 +149,10 @@
             background-position: center;
             background-size: contain;
             width: 2.5vw;
-            height: 3vw;
+            min-width: 30px;
+            max-width: 50px;
+            height: 112px;
             display: inline-block;
-
             position: absolute;
             right: 15px;
             /* Posisi icon di kanan */
@@ -172,7 +173,8 @@
             background-position: center;
             background-size: contain;
             width: 2.5vw;
-            height: 3vw;
+            min-width: 30px;
+            max-width: 50px;
             top: 50%;
             display: inline-block;
             transform: translateY(-50%) rotate(0deg);
@@ -218,8 +220,13 @@
         .label-feature-1 {
             /* padding-top: 20vw; */
             /* padding-left: 30vw; */
-            font-size: 1.5vmax;
+            font-size: 3.0vmin;
+            /* font-size: 1.5vmin; */
             letter-spacing: 1px;
+        }
+
+        .label-footer {
+            font-size: 1.0vmax;
         }
 
         .feature-img {
@@ -719,7 +726,12 @@
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
-            <p>PT BCA Sekuritas berizin dan diawasi oleh Otoritas Jasa Keuangan</p>
+            <div class="row">
+                <div class="col-12 col-md-12  normal-text label-footer">
+                    <p>PT BCA Sekuritas berizin dan diawasi oleh Otoritas Jasa Keuangan</p>
+                </div>
+            </div>
+
         </div>
     </footer>
 
